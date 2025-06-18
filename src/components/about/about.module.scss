@@ -12,14 +12,15 @@
     position: sticky;
     height: fit-content;
     top: var(--static-space-64);
-}
-.toolItem {
-  flex-basis: calc(50% - 6px); // по подразбиране – две колони
+
+    .toolItem {
+  flex-basis: calc(50% - 6px);
 
   @media (max-width: 768px) {
-    flex-basis: 100%; // мобилна версия – една колона
+    flex-basis: 100%;
   }
 }
+
 
     .textAlign {
         text-align: center;
