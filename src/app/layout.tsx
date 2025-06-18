@@ -10,7 +10,7 @@ import { baseURL, effects, fonts, style, dataStyle, home } from '@/resources';
 
 export async function generateMetadata() {
   return {
-    metadataBase: new URL("https://stanchevseo.netlify.app/"),
+    metadataBase: new URL("https://stanchevseo.netlify.app"),
     title: home.title,
     description: home.description,
     openGraph: {
@@ -32,7 +32,7 @@ export async function generateMetadata() {
       card: 'summary_large_image',
       title: home.title,
       description: home.description,
-      images: [home.image],
+      images: [https://stanchevseo.netlify.app/images/og/home.jpg],
     },
   };
 }
