@@ -28,7 +28,20 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: home.title,
   description: home.description,
-  keywords: ["SEO", "оптимизация", "Stanchev SEO", "услуги"],
+  keywords: [
+  "SEO оптимизация",
+  "линк билдинг",
+  "SEO услуги",
+  "оптимизация на сайт",
+  "SEO цена",
+  "SEO консултация",
+  "линк билдинг стратегия",
+  "оптимизация на онлайн магазин",
+  "реклама в Google",
+  "SEO обучение",
+  "SEO копирайтинг",
+  "дигитален маркетинг",
+],
   metadataBase: new URL(baseURL),
   openGraph: {
     title: home.title,
