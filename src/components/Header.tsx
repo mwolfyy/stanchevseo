@@ -8,6 +8,7 @@ import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
 import { routes, display, person, about, blog, work, seoServices, contact } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import { HandshakeIcon } from "@/components/icons/HandshakeIcon";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -118,14 +119,14 @@ export const Header = () => {
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="settings"
+                    prefixIcon={<HandshakeIcon />}
                     href="/seo-uslugi"
                     label={seoServices.label}
                     selected={pathname.startsWith("/seo-uslugi")}
                   />
                   <ToggleButton
                     className="s-flex-show"
-                    prefixIcon="settings"
+                    prefixIcon={<HandshakeIcon />}
                     href="/seo-uslugi"
                     aria-label="SEO услуги"
                     selected={pathname.startsWith("/seo-uslugi")}
