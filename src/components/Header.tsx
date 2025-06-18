@@ -88,6 +88,15 @@ export const Header = () => {
     <>
       <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
       <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
+      <Fade
+  className={styles.headerBlur}
+  show="s"
+  fillWidth
+  position="fixed"
+  top="0"
+  height="80"
+  zIndex={8}
+/>
       <Flex
         fitHeight
         position="unset"
