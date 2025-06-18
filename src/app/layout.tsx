@@ -10,6 +10,7 @@ import { baseURL, effects, fonts, style, dataStyle, home } from '@/resources';
 
 export async function generateMetadata() {
   return {
+    metadataBase: new URL("https://stanchevseo.netlify.app/"),
     title: home.title,
     description: home.description,
     openGraph: {
