@@ -319,13 +319,7 @@ export default function ZaMen() {
         vertical="center"
         gap="8"
         as="li"
-        style={{
-          flexBasis: "calc(50% - 6px)", // 2 колони
-          // Мобилен режим (1 колона)
-          '@media (maxWidth: 768px)': {
-            flexBasis: "100%",
-          },
-        }}
+        className={styles.toolItem}
       >
         <Icon name="checkCircle" size="16" onBackground="brand-strong" />
         <Text variant="body-default-s" onBackground="brand-weak">
