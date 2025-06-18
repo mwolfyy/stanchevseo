@@ -118,14 +118,14 @@ export const Header = () => {
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="handshake"
+                    prefixIcon="settings"
                     href="/seo-uslugi"
                     label={seoServices.label}
                     selected={pathname.startsWith("/seo-uslugi")}
                   />
                   <ToggleButton
                     className="s-flex-show"
-                    prefixIcon="handshake"
+                    prefixIcon="settings"
                     href="/seo-uslugi"
                     aria-label="SEO услуги"
                     selected={pathname.startsWith("/seo-uslugi")}
