@@ -32,7 +32,7 @@ const structure = [
 {
 title: about.intro.title,
 display: about.intro.display,
-items: \[],
+items: [],
 },
 {
 title: about.work.title,
