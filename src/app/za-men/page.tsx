@@ -321,7 +321,7 @@ export default function ZaMen() {
         as="li"
         className={styles.toolItem}
       >
-        <Icon name="checkCircle" size="16" onBackground="brand-strong" />
+        <Icon name="checkCircle" size="s" onBackground="brand-strong" />
         <Text variant="body-default-s" onBackground="brand-weak">
           {tool}
         </Text>
