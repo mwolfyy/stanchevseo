@@ -90,6 +90,7 @@ export const Header = () => {
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="person"
+                    aria-label="За мен"
                     href="/za-men"
                     selected={pathname === "/za-men"}
                   />
@@ -107,6 +108,7 @@ export const Header = () => {
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="grid"
+                    aria-label="SEO проекти"
                     href="/seo-proekti"
                     selected={pathname.startsWith("/seo-proekti")}
                   />
@@ -116,15 +118,16 @@ export const Header = () => {
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="gallery"
+                    prefixIcon="handshake"
                     href="/seo-uslugi"
                     label={seoServices.label}
                     selected={pathname.startsWith("/seo-uslugi")}
                   />
                   <ToggleButton
                     className="s-flex-show"
-                    prefixIcon="gallery"
+                    prefixIcon="handshake"
                     href="/seo-uslugi"
+                    aria-label="SEO услуги"
                     selected={pathname.startsWith("/seo-uslugi")}
                   />
                 </>
@@ -142,6 +145,7 @@ export const Header = () => {
                     className="s-flex-show"
                     prefixIcon="email"
                     href="/kontakti"
+                    aria-label="Контакти"
                     selected={pathname.startsWith("/kontakti")}
                   />
                 </>
@@ -159,6 +163,7 @@ export const Header = () => {
                     className="s-flex-show"
                     prefixIcon="book"
                     href="/blog"
+                    aria-label="SEO блог"
                     selected={pathname.startsWith("/blog")}
                   />
                 </>
