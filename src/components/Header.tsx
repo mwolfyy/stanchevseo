@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
+import { Fade, Flex, Line, ToggleButton, iconLibrary } from "@once-ui-system/core";
 import {
   routes,
   display,
@@ -16,6 +16,7 @@ import {
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
+// ✅ SVG иконата
 const HandshakeIcon = ({ width = 16, height = 16 }: { width?: number; height?: number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +36,9 @@ const HandshakeIcon = ({ width = 16, height = 16 }: { width?: number; height?: n
     <path d="M3 4h8" />
   </svg>
 );
+
+// ✅ Регистрирай я в iconLibrary
+iconLibrary.handshake = HandshakeIcon;
 
 const TimeDisplay = ({
   timeZone,
@@ -61,7 +65,6 @@ const TimeDisplay = ({
 
     updateTime();
     const intervalId = setInterval(updateTime, 1000);
-
     return () => clearInterval(intervalId);
   }, [timeZone, locale]);
 
@@ -144,24 +147,20 @@ export const Header = () => {
               )}
               {routes["/seo-uslugi"] && (
                 <>
-                  <Flex vertical="center" gap="4">
-                    <HandshakeIcon width={16} height={16} />
-                    <ToggleButton
-                      className="s-flex-hide"
-                      href="/seo-uslugi"
-                      label={seoServices.label}
-                      selected={pathname.startsWith("/seo-uslugi")}
-                    />
-                  </Flex>
-                  <Flex vertical="center" gap="4">
-                    <HandshakeIcon width={16} height={16} />
-                    <ToggleButton
-                      className="s-flex-show"
-                      href="/seo-uslugi"
-                      aria-label="SEO услуги"
-                      selected={pathname.startsWith("/seo-uslugi")}
-                    />
-                  </Flex>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="handshake"
+                    href="/seo-uslugi"
+                    label={seoServices.label}
+                    selected={pathname.startsWith("/seo-uslugi")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="handshake"
+                    aria-label="SEO услуги"
+                    href="/seo-uslugi"
+                    selected={pathname.startsWith("/seo-uslugi")}
+                  />
                 </>
               )}
               {routes["/kontakti"] && (
