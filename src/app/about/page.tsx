@@ -28,7 +28,7 @@ path: about.path,
 }
 
 export default function About() {
-const structure = \[
+const structure = [
 {
 title: about.intro.title,
 display: about.intro.display,
