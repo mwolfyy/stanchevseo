@@ -10,7 +10,7 @@ import {
   Tag,
   Text,
   Meta,
-  Schema,
+  Schema
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -163,108 +163,69 @@ export default function About() {
                 fitWidth
                 data-border="rounded"
               >
-                {social.map(
-                  (item) =>
-                    item.link && (
-                      <React.Fragment key={item.name}>
-                        <Button
-                          className="s-flex-hide"
-                          href={item.link}
-                          prefixIcon={item.icon}
-                          label={item.name}
-                          size="s"
-                          weight="default"
-                          variant="secondary"
-                        />
-                        <IconButton
-                          className="s-flex-show"
-                          size="l"
-                          href={item.link}
-                          icon={item.icon}
-                          variant="secondary"
-                        />
-                      </React.Fragment>
-                    )
+                {social.map((item) =>
+                  item.link ? (
+                    <React.Fragment key={item.name}>
+                      <Button
+                        className="s-flex-hide"
+                        href={item.link}
+                        prefixIcon={item.icon}
+                        label={item.name}
+                        size="s"
+                        weight="default"
+                        variant="secondary"
+                      />
+                      <IconButton
+                        className="s-flex-show"
+                        size="l"
+                        href={item.link}
+                        icon={item.icon}
+                        variant="secondary"
+                      />
+                    </React.Fragment>
+                  ) : null
                 )}
               </Flex>
             )}
           </Column>
 
           {about.intro.display && (
-            <Column
-              textVariant="body-default-l"
-              fillWidth
-              gap="m"
-              marginBottom="xl"
-            >
+            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
             </Column>
           )}
 
-          {/* Work Section */}
           {about.work.display && (
             <>
-              <Heading
-                as="h2"
-                id={about.work.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
+              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.work.experiences.map((experience, index) => (
-                  <Column
-                    key={`${experience.company}-${experience.role}-${index}`}
-                    fillWidth
-                  >
-                    <Flex
-                      fillWidth
-                      horizontal="space-between"
-                      vertical="end"
-                      marginBottom="4"
-                    >
+                  <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
+                    <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
                         {experience.company}
                       </Text>
-                      <Text
-                        variant="heading-default-xs"
-                        onBackground="neutral-weak"
-                      >
+                      <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
                     </Flex>
-                    <Text
-                      variant="body-default-s"
-                      onBackground="brand-weak"
-                      marginBottom="m"
-                    >
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
                       {experience.role}
                     </Text>
                     <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: JSX.Element, i: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${i}`}
-                          >
-                            {achievement}
-                          </Text>
-                        )
-                      )}
+                      {experience.achievements.map((achievement, i) => (
+                        <Text as="li" variant="body-default-m" key={`${experience.company}-${i}`}>
+                          {achievement}
+                        </Text>
+                      ))}
                     </Column>
                     {experience.images.length > 0 && (
-                      <Flex
-                        fillWidth
-                        paddingTop="m"
-                        paddingLeft="40"
-                        gap="12"
-                        wrap
-                      >
-                        {experience.images.map((image, i) => (
+                      <Flex fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
+                        {experience.images.map((image, index) => (
                           <Flex
-                            key={i}
+                            key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
@@ -292,15 +253,9 @@ export default function About() {
             </>
           )}
 
-          {/* Studies */}
           {about.studies.display && (
             <>
-              <Heading
-                as="h2"
-                id={about.studies.title}
-                variant="display-strong-s"
-                marginBottom="m"
-              >
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
@@ -309,10 +264,7 @@ export default function About() {
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    <Text
-                      variant="heading-default-xs"
-                      onBackground="neutral-weak"
-                    >
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
                   </Column>
@@ -321,7 +273,6 @@ export default function About() {
             </>
           )}
 
-          {/* Skills */}
           {about.technical.display && (
             <>
               <Heading
@@ -336,10 +287,7 @@ export default function About() {
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text
-                      variant="body-default-m"
-                      onBackground="neutral-weak"
-                    >
+                    <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
                     {skill.tools?.length > 0 && (
@@ -354,13 +302,10 @@ export default function About() {
                           >
                             <Icon
                               name="checkCircle"
-                              size="16"
+                              size="s" // 🔧 FIXED: was "16"
                               onBackground="brand-strong"
                             />
-                            <Text
-                              variant="body-default-s"
-                              onBackground="brand-weak"
-                            >
+                            <Text variant="body-default-s" onBackground="brand-weak">
                               {tool}
                             </Text>
                           </Flex>
@@ -369,9 +314,9 @@ export default function About() {
                     )}
                     {skill.images?.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, i) => (
+                        {skill.images.map((image, index) => (
                           <Flex
-                            key={i}
+                            key={index}
                             border="neutral-medium"
                             radius="m"
                             //@ts-ignore
