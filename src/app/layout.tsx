@@ -1,180 +1,125 @@
-import '@once-ui-system/core/css/styles.css';
-import '@once-ui-system/core/css/tokens.css';
-import '@/resources/custom.css'
+import "@once-ui-system/core/css/styles.css";
+import "@once-ui-system/core/css/tokens.css";
+import "@/resources/custom.css";
 
 import classNames from "classnames";
+import {
+  Background,
+  Column,
+  Flex,
+  opacity,
+  SpacingToken,
+} from "@once-ui-system/core";
+import { Footer, Header, RouteGuard, Providers } from "@/components";
+import {
+  baseURL,
+  effects,
+  fonts,
+  style,
+  dataStyle,
+  home,
+} from "@/resources";
+import Script from "next/script";
+import { Metadata } from "next";
 
-import { Background, Column, Flex, Meta, opacity, SpacingToken } from "@once-ui-system/core";
-import { Footer, Header, RouteGuard, Providers } from '@/components';
-import { baseURL, effects, fonts, style, dataStyle, home } from '@/resources';
-
-export async function generateMetadata() {
-  return {
+// ───────────────────────────────────────────────────────────
+// 1.  Метаданни – Next.js ще ги сложи сам в <head>
+// ───────────────────────────────────────────────────────────
+export const metadata: Metadata = {
+  title: home.title,
+  description: home.description,
+  keywords: ["SEO", "оптимизация", "Stanchev SEO", "услуги"],
+  metadataBase: new URL(baseURL),
+  openGraph: {
     title: home.title,
     description: home.description,
-    keywords: ['SEO', 'маркетинг', 'оптимизация', 'seo консултант', 'seo цена'], // добави своите
-    openGraph: {
-      title: home.title,
-      description: home.description,
-      url: baseURL,
-      siteName: home.title,
-      images: [
-        {
-          url: home.image,
-          width: 1200,
-          height: 630,
-        },
-      ],
-      locale: 'bg_BG',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: home.title,
-      description: home.description,
-      images: [home.image],
-    },
-  };
-}
+    url: baseURL,
+    siteName: home.title,
+    images: [{ url: home.image, width: 1200, height: 630 }],
+    locale: "bg_BG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: home.title,
+    description: home.description,
+    images: [home.image],
+  },
+};
 
-export default async function RootLayout({
+// ───────────────────────────────────────────────────────────
+// 2.  Layout компонент – без <head>, без <Meta>
+// ───────────────────────────────────────────────────────────
+export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <Flex
-      suppressHydrationWarning
-      as="html"
+    <html
       lang="bg"
-      fillWidth
+      suppressHydrationWarning
       className={classNames(
         fonts.heading.variable,
         fonts.body.variable,
         fonts.label.variable,
-        fonts.code.variable,
+        fonts.code.variable
       )}
     >
-      <head>
-        <script
-          id="theme-init"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const root = document.documentElement;
-                  const defaultTheme = 'system';
-                  
-                  // Set defaults from config
-                  const config = ${JSON.stringify({
-                    brand: style.brand,
-                    accent: style.accent,
-                    neutral: style.neutral,
-                    solid: style.solid,
-                    'solid-style': style.solidStyle,
-                    border: style.border,
-                    surface: style.surface,
-                    transition: style.transition,
-                    scaling: style.scaling,
-                    'viz-style': dataStyle.variant,
-                  })};
-                  
-                  // Apply default values
-                  Object.entries(config).forEach(([key, value]) => {
-                    root.setAttribute('data-' + key, value);
-                  });
-                  
-                  // Resolve theme
-                  const resolveTheme = (themeValue) => {
-                    if (!themeValue || themeValue === 'system') {
-                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                    }
-                    return themeValue;
-                  };
-                  
-                  // Apply saved theme
-                  const savedTheme = localStorage.getItem('data-theme');
-                  const resolvedTheme = resolveTheme(savedTheme);
-                  root.setAttribute('data-theme', resolvedTheme);
-                  
-                  // Apply any saved style overrides
-                  const styleKeys = Object.keys(config);
-                  styleKeys.forEach(key => {
-                    const value = localStorage.getItem('data-' + key);
-                    if (value) {
-                      root.setAttribute('data-' + key, value);
-                    }
-                  });
-                } catch (e) {
-                  console.error('Failed to initialize theme:', e);
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <Providers>
-        <Column as="body" background="page" fillWidth style={{minHeight: "100vh"}} margin="0" padding="0" horizontal="center">
+      {/* theme-init скрипта – използвай next/script */}
+      <Script id="theme-init" strategy="beforeInteractive">{`
+        (function () {
+          try {
+            const root = document.documentElement;
+            const config = ${JSON.stringify({
+              brand: style.brand,
+              accent: style.accent,
+              neutral: style.neutral,
+              solid: style.solid,
+              "solid-style": style.solidStyle,
+              border: style.border,
+              surface: style.surface,
+              transition: style.transition,
+              scaling: style.scaling,
+              "viz-style": dataStyle.variant,
+            })};
+            Object.entries(config).forEach(([k, v]) =>
+              root.setAttribute("data-" + k, v)
+            );
+            const resolveTheme = (t) =>
+              !t || t === "system"
+                ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                  ? "dark"
+                  : "light"
+                : t;
+            root.setAttribute("data-theme", resolveTheme(localStorage.getItem("data-theme")));
+          } catch (e) {
+            console.error(e);
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        })();
+      `}</Script>
+
+      <body className="page-background flex flex-col items-center min-h-screen">
+        <Providers>
           <Background
             position="fixed"
-            mask={{
-              x: effects.mask.x,
-              y: effects.mask.y,
-              radius: effects.mask.radius,
-              cursor: effects.mask.cursor,
-            }}
-            gradient={{
-              display: effects.gradient.display,
-              opacity: effects.gradient.opacity as opacity,
-              x: effects.gradient.x,
-              y: effects.gradient.y,
-              width: effects.gradient.width,
-              height: effects.gradient.height,
-              tilt: effects.gradient.tilt,
-              colorStart: effects.gradient.colorStart,
-              colorEnd: effects.gradient.colorEnd,
-            }}
-            dots={{
-              display: effects.dots.display,
-              opacity: effects.dots.opacity as opacity,
-              size: effects.dots.size as SpacingToken,
-              color: effects.dots.color,
-            }}
-            grid={{
-              display: effects.grid.display,
-              opacity: effects.grid.opacity as opacity,
-              color: effects.grid.color,
-              width: effects.grid.width,
-              height: effects.grid.height,
-            }}
-            lines={{
-              display: effects.lines.display,
-              opacity: effects.lines.opacity as opacity,
-              size: effects.lines.size as SpacingToken,
-              thickness: effects.lines.thickness,
-              angle: effects.lines.angle,
-              color: effects.lines.color,
-            }}
+            mask={effects.mask}
+            gradient={{ ...effects.gradient, opacity: effects.gradient.opacity as opacity }}
+            dots={{ ...effects.dots, opacity: effects.dots.opacity as opacity, size: effects.dots.size as SpacingToken }}
+            grid={{ ...effects.grid, opacity: effects.grid.opacity as opacity }}
+            lines={{ ...effects.lines, opacity: effects.lines.opacity as opacity, size: effects.lines.size as SpacingToken }}
           />
-          <Flex fillWidth minHeight="16" hide="s"/>
-            <Header />
-            <Flex
-              zIndex={0}
-              fillWidth
-              padding="l"
-              horizontal="center"
-              flex={1}
-            >
-              <Flex horizontal="center" fillWidth minHeight="0">
-                <RouteGuard>
-                  {children}
-                </RouteGuard>
-              </Flex>
+          <Flex fillWidth minHeight="16" hide="s" />
+          <Header />
+          <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
+            <Flex horizontal="center" fillWidth minHeight="0">
+              <RouteGuard>{children}</RouteGuard>
             </Flex>
-            <Footer/>
-          </Column>
+          </Flex>
+          <Footer />
         </Providers>
-      </Flex>
+      </body>
+    </html>
   );
 }
