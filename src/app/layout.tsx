@@ -123,7 +123,6 @@ export default function RootLayout({
             grid={{ ...effects.grid, opacity: effects.grid.opacity as opacity }}
             lines={{ ...effects.lines, opacity: effects.lines.opacity as opacity, size: effects.lines.size as SpacingToken }}
           />
-          <Flex fillWidth minHeight="16" hide="s" />
           <Header />
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
             <Flex horizontal="center" fillWidth minHeight="0">
