@@ -13,11 +13,13 @@
     height: fit-content;
     top: var(--static-space-64);
 }
+.toolItem {
+  flex-basis: calc(50% - 6px); // по подразбиране – две колони
 
-@media (max-width: breakpoints.$s) {
-    .avatar {
-        top: auto;
-    }
+  @media (max-width: 768px) {
+    flex-basis: 100%; // мобилна версия – една колона
+  }
+}
 
     .textAlign {
         text-align: center;
