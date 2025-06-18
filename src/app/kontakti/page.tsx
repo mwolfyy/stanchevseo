@@ -106,7 +106,6 @@ export default function Kontakti() {
             <Column gap="16">
               <Input
                 id="name"
-                label="Име"
                 placeholder="Вашето име"
                 required
               />
@@ -114,14 +113,12 @@ export default function Kontakti() {
               <Input
                 id="email"
                 type="email"
-                label="Email"
                 placeholder="your@email.com"
                 required
               />
               
               <Input
                 id="subject"
-                label="Тема"
                 placeholder="Тема на съобщението"
                 required
               />
