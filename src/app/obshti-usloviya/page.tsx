@@ -3,7 +3,7 @@ import { Column, Flex, Feedback } from "@once-ui-system/core";
 export default function TermsPage() {
   return (
     <Column as="section" padding="xl" gap="xl" fillWidth>
-      <Flex as="h1" textVariant="heading-s" horizontal="center">
+      <Flex as="h1" textVariant="display-default-m" horizontal="center">
         Общи условия за ползване на услугите на Stanchev.bg
       </Flex>
 
