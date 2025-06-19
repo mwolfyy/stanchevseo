@@ -10,6 +10,7 @@ const routes = {
   "/kontakti": true,
   "/blog": true,
   "/gallery": false,
+  "/obshti-usloviya": true,
 };
 
 const display = {
