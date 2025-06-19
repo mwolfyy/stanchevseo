@@ -78,7 +78,6 @@ export default async function Project({
       {post.metadata.images.length > 0 && (
         <Media
           priority
-          quality={70}
           sizes="(max-width: 768px) 100vw, 960px"
           aspectRatio="16 / 9"
           radius="m"
