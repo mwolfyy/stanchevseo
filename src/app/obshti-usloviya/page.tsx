@@ -1,4 +1,4 @@
-import { Column, Flex, Callout } from "@once-ui-system/core";
+import { Column, Flex, Feedback } from "@once-ui-system/core";
 
 export default function TermsPage() {
   return (
