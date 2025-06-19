@@ -12,7 +12,7 @@ export default function TermsPage() {
       </Flex>
 
       <Column gap="l">
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           1. Данни за доставчика
         </Flex>
         <Flex as="p">Stanchev.bg е уебсайт, собственост на Стоян Станчев.</Flex>
@@ -21,7 +21,7 @@ export default function TermsPage() {
           <li>Имейл: seo@stanchev.bg</li>
         </Flex>
 
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           2. Обхват на услугите
         </Flex>
         <Flex as="ul" listStyle="disc" paddingLeft="l">
@@ -35,7 +35,7 @@ export default function TermsPage() {
           Услугите се предоставят след потвърждение и писмено съгласие между двете страни.
         </Callout>
 
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           3. Права и отговорности
         </Flex>
         <Flex as="p">Потребителят се задължава:</Flex>
@@ -49,14 +49,14 @@ export default function TermsPage() {
           <li>Да откаже услуга при съмнение за недобросъвестност</li>
         </Flex>
 
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           4. Поверителност
         </Flex>
         <Flex as="p">
           Всички данни и анализи, предоставени от клиента, се третират като строго поверителни и не се споделят с трети страни.
         </Flex>
 
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           5. Плащания и срокове
         </Flex>
         <Flex as="p">
@@ -66,14 +66,14 @@ export default function TermsPage() {
 		title="Важно" 
 		description="За абонаментни услуги и дългосрочни партньорства се договарят индивидуални условия."
 		/>
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           6. Авторски права
         </Flex>
         <Flex as="p">
           Всички материали на сайта (текстове, графики, дизайн) са собственост на Стоян Станчев и не могат да бъдат използвани без разрешение.
         </Flex>
 
-        <Flex as="h2" textVariant="heading-xl">
+        <Flex as="h2" textVariant="display-default-m">
           7. Заключителни разпоредби
         </Flex>
         <Flex as="p">
