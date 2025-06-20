@@ -8,6 +8,7 @@ import {
   Icon,
   Feedback,
 } from '@once-ui-system/core';
+import SeoAuditFAQ from './faq';
 
 export default function SeoAuditPage() {
   return (
@@ -174,4 +175,5 @@ export default function SeoAuditPage() {
     </Column>
   );
   <h4 id="faq-seo-odit">Често Задавани Въпроси (ЧЗВ) за SEO Одита</h4>
+  <SeoAuditFAQ />
 }
