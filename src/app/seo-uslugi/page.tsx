@@ -82,6 +82,16 @@ export default function SeoUslugi() {
             <Text variant="heading-strong-m" marginTop="m">
               {service.price}
             </Text>
+            {service.slug && (
+      <Button
+        href={`/seo-uslugi/${service.slug}`}
+        variant="secondary"
+        size="m"
+        arrowIcon
+      >
+        Виж повече
+      </Button>
+    )}
           </Card>
         ))}
       </Grid>
