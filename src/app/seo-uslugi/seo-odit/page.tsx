@@ -22,7 +22,7 @@ export default function SeoAuditPage() {
           сайт, задълбоченият SEO одит е фундаментът
           за видимост в Google и ниски SEO цени в бъдеще.
         </Text>
-
+      <Flex horizontal="center">
         <Button
           variant="primary"
           size="l"
@@ -32,6 +32,7 @@ export default function SeoAuditPage() {
         >
           Заяви безплатна консултация
         </Button>
+      </Flex>
       </Column>
 
       <Flex gap="8" wrap horizontal="center">
