@@ -156,7 +156,8 @@ export default function SeoAuditPage() {
           </Flex>
         </Column>
       </Column>
-
+    <Heading as="h4" variant="display-default-s">Често Задавани Въпроси (ЧЗВ) за SEO Одита</Heading>
+    <SeoAuditFAQ />
       <Column gap="m" align="center" paddingTop="xl">
         <Heading variant="display-strong-m" align="center">
           Готови ли сте за истински SEO резултати?
@@ -171,8 +172,6 @@ export default function SeoAuditPage() {
           Свържи се с нас
         </Button>
       </Flex>
-    <Heading as="h4" variant="display-default-m">Често Задавани Въпроси (ЧЗВ) за SEO Одита</Heading>
-    <SeoAuditFAQ />
       </Column>
     </Column>
   );
