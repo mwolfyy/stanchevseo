@@ -1,4 +1,4 @@
-import { Logo } from "@once-ui-system/core";
+import { Logo, Button } from "@once-ui-system/core";
 
 const person = {
   firstName: "Станчев",
@@ -174,6 +174,7 @@ const seoServices = {
   services: [
     {
       title: "SEO Одит",
+      slug: "seo-odit",
       description: "Анализ на SEO състоянието на сайта и стратегии за подобрение.",
       features: [
         "Технически SEO анализ",
@@ -183,6 +184,14 @@ const seoServices = {
         "Детайлен отчет",
       ],
       price: "От 200 лв.",
+      <Button
+        href={`/seo-uslugi/${service.slug}`}
+        variant="secondary"
+        size="m"
+        arrowIcon
+      >
+        Виж повече
+        </Button>
     },
     {
       title: "On-Page SEO",
