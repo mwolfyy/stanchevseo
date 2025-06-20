@@ -18,7 +18,7 @@ export default function TermsPage() {
         <Flex as="h2" textVariant="display-default-m">
           1. Данни за доставчика
         </Flex>
-        <Flex as="p">Stanchev.bg е уебсайт, собственост на Стоян Станчев.</Flex>
+        <Flex as="p">Stanchev.bg е уебсайт, собственост на Станчев.</Flex>
         <Column as="ul" gap="s" paddingLeft="l">
           <li>Уебсайт: https://stanchev.bg</li>
           <li>Имейл: seo@stanchev.bg</li>
