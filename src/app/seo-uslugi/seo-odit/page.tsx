@@ -173,6 +173,7 @@ export default function SeoAuditPage() {
       </Column>
     </Column>
   );
+  <h4 id="faq-seo-odit">Често Задавани Въпроси (ЧЗВ) за SEO Одита</h4>
   <AccordionGroup
   items={[
     {
