@@ -7,6 +7,7 @@ import {
   Tag,
   Icon,
   Feedback,
+  AccordionGroup,
 } from '@once-ui-system/core';
 
 export default function SeoAuditPage() {
