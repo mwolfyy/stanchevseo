@@ -184,14 +184,6 @@ const seoServices = {
         "Детайлен отчет",
       ],
       price: "От 200 лв.",
-      <Button
-        href={`/seo-uslugi/${service.slug}`}
-        variant="secondary"
-        size="m"
-        arrowIcon
-      >
-        Виж повече
-        </Button>
     },
     {
       title: "On-Page SEO",
