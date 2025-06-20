@@ -18,7 +18,7 @@ export default function SeoAuditPage() {
         </Heading>
 
         <Text variant="display-default-s" align="center" onBackground="neutral-weak">
-          Независимо дали сте <em>онлайн магазин</em>, SaaS платформа или корпоративен
+          Независимо дали сте онлайн магазин, SaaS платформа или корпоративен
           сайт, задълбоченият SEO одит е фундаментът
           за видимост в Google и ниски SEO цени в бъдеще.
         </Text>
@@ -50,18 +50,18 @@ export default function SeoAuditPage() {
 
         <Text variant="body-default-l">
           Одитът е подробен <strong>SEO анализ на сайта</strong>, който разкрива
-          скрити технически бариери, пропуски във <em>link building-а</em> и
-          неправилно структурирани <em>on-page</em> елементи. Като опитен
-          <strong>SEO консултант</strong> работя с екип от сертифицирани <strong>SEO специалисти</strong>,
-          за да покрием целия спектър – от <em>интернет реклама</em> и <em>AdWords</em> кампании до
-          <em>ултимативна оптимизация на онлайн магазини</em>.
+          скрити технически бариери, пропуски в link building-а и
+          неправилно структурирани on-page елементи. Като опитен
+          SEO консултант работя с екип от сертифицирани SEO специалисти,
+          за да покрием целия спектър – от интернет реклама и AdWords кампании до
+          ултимативна оптимизация на онлайн магазини.
         </Text>
 
         <Column as="ul" gap="s" paddingLeft="l">
           <li><strong>Техническа проверка</strong> – Core Web Vitals, мобилна производителност, schema markup и бързина.</li>
-          <li><strong>Ключови думи & съдържание</strong> – <em>keyword research</em>, <em>SEO копирайтинг</em> и оптимизация на статии.</li>
-          <li><strong>Външни фактори</strong> – <em>линк билдинг</em>, <em>директории за регистрации</em>, онлайн репутация и <em>PPС кампании</em>.</li>
-          <li><strong>Конкурентен анализ</strong> – сравнение с топ <em>SEO фирми</em> в нишата и препоръки за по-добро класиране.</li>
+          <li><strong>Ключови думи & съдържание</strong> – keyword research, SEO копирайтинг и оптимизация на статии.</li>
+          <li><strong>Външни фактори</strong> – линк билдинг, директории за регистрации, онлайн репутация и PPС кампании.</li>
+          <li><strong>Конкурентен анализ</strong> – сравнение с топ SEO фирми в нишата и препоръки за по-добро класиране.</li>
         </Column>
       </Column>
 
@@ -71,13 +71,13 @@ export default function SeoAuditPage() {
         </Heading>
 
         <Text variant="body-default-l">
-          Без ясно диагностициран сайт дори най-ниската <strong>цена за SEO оптимизация</strong> може да се окаже излишен
-          разход. Одитът дава карта за действие – от <em>редизайн на уеб сайт</em> до изграждане на нова <em>SEO стратегия</em>.
-          Това спестява средства от бъдещи <em>linkbuilding</em> разходи и ускорява <strong>класирането в Google</strong>.
+          Без ясно диагностициран сайт дори най-ниската цена за SEO оптимизация може да се окаже излишен
+          разход. Одитът дава карта за действие – от редизайн на уеб сайт до изграждане на нова SEO стратегия.
+          Това спестява средства от бъдещи linkbuilding разходи и ускорява класирането в Google.
         </Text>
 
         <Feedback
-          title="Tip"
+          title="Съвет"
           description="Нашите доклади се изготвят с приоритет на KPI-те за продажби, а не само с филтрирана SEO терминология."
         />
       </Column>
@@ -126,14 +126,11 @@ export default function SeoAuditPage() {
                 Базов SEO Одит
               </Heading>
               <Text variant="body-default-m">
-                Подходящ за <em>SEO за начинаещи</em> и фирми с ограничен бюджет.
+                Подходящ за SEO за начинаещи и фирми с ограничен бюджет.
               </Text>
             </Column>
             <Column flex={4} align="end">
               <Heading variant="display-strong-s">от 650&nbsp;лв.</Heading>
-              <Button href="/kontakti" size="s" variant="secondary">
-                Поръчай
-              </Button>
             </Column>
           </Flex>
 
@@ -149,14 +146,11 @@ export default function SeoAuditPage() {
                 Премиум SEO Одит + Link Building
               </Heading>
               <Text variant="body-default-m">
-                Включва <em>ефективна SEO оптимизация</em>, <em>SEO курс онлайн</em> за екипа и персонален <em>SEO оптимизатор</em>.
+                Включва ефективна SEO оптимизация и персонален SEO оптимизатор.
               </Text>
             </Column>
             <Column flex={4} align="end">
               <Heading variant="display-strong-s">от 1 750&nbsp;лв.</Heading>
-              <Button href="/kontakti" size="s" variant="secondary">
-                Поръчай
-              </Button>
             </Column>
           </Flex>
         </Column>
