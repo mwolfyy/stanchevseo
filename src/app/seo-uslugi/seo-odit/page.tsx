@@ -171,9 +171,9 @@ export default function SeoAuditPage() {
           Свържи се с нас
         </Button>
       </Flex>
+    <Heading as="h4" variant="display-default-m">Често Задавани Въпроси (ЧЗВ) за SEO Одита</Heading>
+    <SeoAuditFAQ />
       </Column>
     </Column>
   );
- <Heading as="h4" variant="display-default-m">Често Задавани Въпроси (ЧЗВ) за SEO Одита</Heading>
-  <SeoAuditFAQ />
 }
