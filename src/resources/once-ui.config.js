@@ -11,6 +11,7 @@ const routes = {
   "/blog": true,
   "/gallery": false,
   "/obshti-usloviya": true,
+  "/seo-uslugi/seo-odit": true,
 };
 
 const display = {
