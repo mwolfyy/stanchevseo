@@ -166,6 +166,7 @@ export default function SeoAuditPage() {
         <Heading variant="display-strong-m" align="center">
           Готови ли сте за истински SEO резултати?
         </Heading>
+      <Flex horizontal="center">
         <Button
           variant="primary"
           size="l"
@@ -174,6 +175,7 @@ export default function SeoAuditPage() {
         >
           Свържи се с нас
         </Button>
+      </Flex>
       </Column>
     </Column>
   );
