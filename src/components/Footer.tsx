@@ -25,6 +25,8 @@ export const Footer = () => {
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
+          <Text paddingX="4">{person.name}</Text>
+          <a href="/obshti-usloviya">Общи условия</a>
         </Text>
         <Flex gap="16">
           {social.map(
