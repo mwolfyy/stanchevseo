@@ -16,7 +16,6 @@ const routes = {
   "/seo-uslugi/keyword-research": true,
   "/seo-uslugi/seo-konsultaciya": true,
 };
-};
 
 const display = {
   location: true,
