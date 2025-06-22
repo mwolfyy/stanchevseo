@@ -13,6 +13,9 @@ const routes = {
   "/obshti-usloviya": true,
   "/seo-uslugi/seo-odit": true,
   "/seo-uslugi/on-page-seo": true,
+  "/seo-uslugi/keyword-research": true,
+  "/seo-uslugi/seo-konsultaciya": true,
+};
 };
 
 const display = {
