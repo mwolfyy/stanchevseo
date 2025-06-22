@@ -187,6 +187,7 @@ const seoServices = {
     },
     {
       title: "On-Page SEO",
+      slug: "on-page-seo",
       description: "Оптимизация на структурата, мета данни и съдържание.",
       features: [
         "Оптимизация на заглавия и мета описания",
