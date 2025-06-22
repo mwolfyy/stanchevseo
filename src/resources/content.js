@@ -200,6 +200,7 @@ const seoServices = {
     },
     {
       title: "Keyword Research",
+      slug: "keyword-research",
       description: "Изследване на ключови думи и създаване на SEO стратегия.",
       features: [
         "Анализ на ключови думи",
@@ -212,6 +213,7 @@ const seoServices = {
     },
     {
       title: "SEO Консултация",
+      slug: "seo-konsultaciya",
       description: "Лична консултация със SEO експерт за вашия бизнес.",
       features: [
         "1-часова консултация",
