@@ -6,36 +6,37 @@ import {
   Button, 
   Input, 
   Textarea,
-  Meta, 
   Schema,
   Icon
 } from "@once-ui-system/core";
 import { baseURL, person, contact } from "@/resources";
 
 export const dynamic = "force-static";
+
 export const metadata = {
-  title: contact.title,
-  description: contact.description,
+  title: "Контакти | StanchevSEO",
+  description: "Свържете се с мен за SEO консултация или запитване относно оптимизация на сайт.",
+  keywords: "SEO оптимизация, линк билдинг, SEO услуги, оптимизация на сайт, SEO цена, SEO консултация",
   openGraph: {
-    title: contact.title,
-    description: contact.description,
-    url: `${baseURL}/kontakti`,
-    siteName: contact.title,
+    title: "Контакти | StanchevSEO",
+    description: "Свържете се с мен за SEO консултация или запитване относно оптимизация на сайт.",
+    url: "https://stanchevseo.netlify.app/kontakti",
+    siteName: "StanchevSEO",
     images: [
       {
-        url: `/images/og/og.jpg`,
+        url: "/images/og/og.jpg",
         width: 1200,
         height: 630,
       },
     ],
-    locale: 'bg_BG',
-    type: 'website',
+    type: "website",
+    locale: "bg_BG",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: contact.title,
-    description: contact.description,
-    images: [`/images/og/og.jpg`],
+    card: "summary_large_image",
+    title: "Контакти | StanchevSEO",
+    description: "Свържете се с мен за SEO консултация или запитване относно оптимизация на сайт.",
+    images: ["/images/og/og.jpg"],
   },
 };
 
