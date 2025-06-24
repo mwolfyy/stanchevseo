@@ -11,8 +11,6 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, person, contact } from "@/resources";
 
-export const dynamic = "force-static";
-
 export const metadata = {
   title: "Контакти | StanchevSEO",
   description: "Свържете се с мен за SEO консултация или запитване относно оптимизация на сайт.",
