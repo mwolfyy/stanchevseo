@@ -15,6 +15,5 @@ const nextConfig = {
   },
   output: "standalone",
 };
-};
 
 export default withMDX(nextConfig);
