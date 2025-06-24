@@ -12,6 +12,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, person, contact } from "@/resources";
 
+export const dynamic = "force-static";
 export async function generateMetadata() {
   return {
     title: contact.title,
