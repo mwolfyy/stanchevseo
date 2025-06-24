@@ -1,6 +1,6 @@
 import { home } from "./content";
 
-const baseURL = "https://stanchev.bg/";
+const baseURL = "https://stanchevseo.netlify.app/";
 
 const routes = {
   "/": true,
