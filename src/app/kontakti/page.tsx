@@ -10,6 +10,7 @@ import {
   Icon
 } from "@once-ui-system/core";
 import { baseURL, person, contact } from "@/resources";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Контакти | StanchevSEO",
