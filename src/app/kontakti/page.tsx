@@ -13,33 +13,31 @@ import {
 import { baseURL, person, contact } from "@/resources";
 
 export const dynamic = "force-static";
-export async function generateMetadata() {
-  return {
+export const metadata = {
+  title: contact.title,
+  description: contact.description,
+  openGraph: {
     title: contact.title,
     description: contact.description,
-    openGraph: {
-      title: contact.title,
-      description: contact.description,
-      url: `${baseURL}/kontakti`,
-      siteName: contact.title,
-      images: [
-        {
-          url: `/api/og/generate?title=${encodeURIComponent(contact.title)}`,
-          width: 1200,
-          height: 630,
-        },
-      ],
-      locale: 'bg_BG',
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: contact.title,
-      description: contact.description,
-      images: [`/api/og/generate?title=${encodeURIComponent(contact.title)}`],
-    },
-  };
-}
+    url: `${baseURL}/kontakti`,
+    siteName: contact.title,
+    images: [
+      {
+        url: `/images/og/og.jpg`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'bg_BG',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: contact.title,
+    description: contact.description,
+    images: [`/images/og/og.jpg`],
+  },
+};
 
 export default function Kontakti() {
   return (
@@ -50,7 +48,7 @@ export default function Kontakti() {
         title={contact.title}
         description={contact.description}
         path="/kontakti"
-        image={`/api/og/generate?title=${encodeURIComponent(contact.title)}`}
+        image={`/images/og/og.jpg`}
         author={{
           name: person.name,
           url: `${baseURL}/kontakti`,
